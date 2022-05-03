@@ -1,0 +1,366 @@
+﻿<Window x:Class="Game.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="CanResize">
+
+    <Grid>
+        <Grid x:Name="MainGrid" Visibility="Visible">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button x:Name="StartButton" 
+                Grid.Column="2" 
+                Grid.Row="1" 
+                Content="Start" 
+                Click="startClick" />
+
+            <Button x:Name="ExitButton" 
+                Grid.Column="2" 
+                Grid.Row="3" 
+                Content="Exit" 
+                Click="exitClick"/>
+        </Grid>
+        <Grid x:Name="FloorGrid" 
+              Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button x:Name="Floor1" 
+                    Content="Этаж 1" 
+                    Grid.Column="0" 
+                    Grid.Row="1" 
+                    Margin="0 5" 
+                    Click="floor1Click"/>
+
+            <Button x:Name="Floor2" 
+                    Content="Этаж 2" 
+                    Grid.Column="0" 
+                    Grid.Row="2" 
+                    Margin="0 5"/>
+
+            <Button x:Name="Floor3" 
+                    Content="Этаж 3" 
+                    Grid.Column="0" 
+                    Grid.Row="3" 
+                    Margin="0 5"/>
+
+            <Button x:Name="Floor4" 
+                    Content="Этаж 4" 
+                    Grid.Column="0" 
+                    Grid.Row="4" 
+                    Margin="0 5"/>
+
+            <Button x:Name="Floor5" 
+                    Content="Этаж 5" 
+                    Grid.Column="0" 
+                    Grid.Row="5" 
+                    Margin="0 5"/>
+
+            <Button x:Name="BackButtonFloor" 
+                    Content="Назад" 
+                    Grid.Column="5" 
+                    Grid.Row="6" 
+                    Margin="0 5" 
+                    Click="backFloor"/>
+        </Grid>
+        <Grid x:Name="Floor1q" 
+              Visibility="Visible">
+            <Grid x:Name="q1" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="F1q1" 
+                           Text="Что такое звезда?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Сфера из плазмы" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="Каместая сфера"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="Газовая сфера с каменным ядром" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="Сфера из льда" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"
+                        />
+            </Grid>
+            <Grid x:Name="q2" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="В каком созвездии находится Полярная звезда?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Большая Медведица" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+                <Button Content="Лев"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+                
+
+                <Button Content="Дракон" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+                <Button Content="Малая Медведица" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            <Grid x:Name="q3" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Какое созвездие похоже на утюг?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Лебедь" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="Лев"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="Орёл" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="Лира" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            <Grid x:Name="q4" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Каково созвездия не существует?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Скорпион" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="Рак"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="Козерог" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="Бабочка" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            <Grid x:Name="q5" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Назовите ближайшую к нам звезду?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Сириус" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="Солнце"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="Петельгейзе" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="Луна" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

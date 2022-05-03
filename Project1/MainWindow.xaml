@@ -108,15 +108,13 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBlock x:Name="F1q1" 
-                           Text="Что такое звезда?" 
+                <TextBlock Text="Что такое звезда?" 
                            Grid.RowSpan="2" 
                            Grid.ColumnSpan="4" 
                            Margin="20" 
                            TextWrapping="Wrap" 
                            FontSize="30" 
                            HorizontalAlignment="Center"/>
-
                 <Button Content="Сфера из плазмы" 
                         Grid.Column="0" 
                         Grid.Row="3" 
@@ -182,7 +180,7 @@
                         Grid.Row="3" 
                         Margin="10"
                         Click="nextQ2NotTrue"/>
-                
+
 
                 <Button Content="Дракон" 
                         Grid.Column="2" 
@@ -310,27 +308,8 @@
             </Grid>
             <Grid x:Name="q5" 
                   Visibility="Collapsed">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <TextBlock Text="Назовите ближайшую к нам звезду?" 
-                           Grid.RowSpan="2" 
-                           Grid.ColumnSpan="4" 
-                           Margin="20" 
-                           TextWrapping="Wrap" 
-                           FontSize="30" 
-                           HorizontalAlignment="Center"/>
 
+                <TextBlock Text="Назовите ближайшую к нам звезду?"/>
                 <Button Content="Сириус" 
                         Grid.Column="0" 
                         Grid.Row="3" 

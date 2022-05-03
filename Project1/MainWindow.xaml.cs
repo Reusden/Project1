@@ -54,8 +54,6 @@ namespace Game
         }
         private void nextQ1NotTrue(object sender, RoutedEventArgs e) //Следующий вопрос
         {
-            q1.Visibility = Visibility.Collapsed;
-            q2.Visibility = Visibility.Visible;
         }
         private void nextQ1True(object sender, RoutedEventArgs e) //Следующий вопрос, правильный ответ
         {

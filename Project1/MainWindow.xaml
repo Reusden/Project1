@@ -8,7 +8,8 @@
         Title="MainWindow" Height="450" Width="800" ResizeMode="CanResize">
 
     <Grid>
-        <Grid x:Name="MainGrid" Visibility="Visible">
+        <Grid x:Name="MainGrid" 
+              Visibility="Collapsed">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -92,7 +93,7 @@
                     Click="backFloor"/>
         </Grid>
         <Grid x:Name="Floor1q" 
-              Visibility="Visible">
+              Visibility="Collapsed">
             <Grid x:Name="q1" 
                   Visibility="Collapsed">
                 <Grid.ColumnDefinitions>
@@ -341,5 +342,991 @@
                         Click="backQ1"/>
             </Grid>
         </Grid>
+        <Grid x:Name="Floor2q" 
+              Visibility="Visible">
+            <Grid x:Name="q12" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Как называется основной объект Вселенной ?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+                <TextBox x:Name="TextBox1"
+                         Grid.ColumnSpan="4"
+                         Grid.Row="3"
+                         SpellCheck.IsEnabled="True" Language="ru-ru"
+                         ToolTip="Введите сюда свой ответ."
+                         KeyDown="TextBox_KeyDown"
+                         MaxLength="10"
+                         MaxLines="6"/>
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"
+                        />
+            </Grid>
+            <Grid x:Name="q22" 
+                  Visibility="Visible">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="В каком созвездии находится Полярная звезда?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Большая Медведица" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+                <Button Content="Лев"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+
+                <Button Content="Дракон" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+                <Button Content="Малая Медведица" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            <Grid x:Name="q32" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Какое созвездие похоже на утюг?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Лебедь" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="Лев"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="Орёл" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="Лира" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            <Grid x:Name="q42" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Каково созвездия не существует?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Скорпион" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="Рак"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="Козерог" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="Бабочка" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            <Grid x:Name="q52" 
+                  Visibility="Collapsed">
+
+                <TextBlock Text="Назовите ближайшую к нам звезду?"/>
+                <Button Content="Сириус" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="Солнце"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="Петельгейзе" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="Луна" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            
+        </Grid>
+        <Grid x:Name="Floor3q" 
+              Visibility="Collapsed">
+            <Grid x:Name="q13" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Что такое звезда?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+                <Button Content="Сфера из плазмы" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="Каместая сфера"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="Газовая сфера с каменным ядром" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="Сфера из льда" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"
+                        />
+            </Grid>
+            <Grid x:Name="q23" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="В каком созвездии находится Полярная звезда?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Большая Медведица" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+                <Button Content="Лев"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+
+                <Button Content="Дракон" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+                <Button Content="Малая Медведица" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            <Grid x:Name="q33" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Какое созвездие похоже на утюг?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Лебедь" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="Лев"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="Орёл" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="Лира" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            <Grid x:Name="q43" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Каково созвездия не существует?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Скорпион" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="Рак"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="Козерог" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="Бабочка" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            <Grid x:Name="q53" 
+                  Visibility="Collapsed">
+
+                <TextBlock Text="Назовите ближайшую к нам звезду?"/>
+                <Button Content="Сириус" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="Солнце"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="Петельгейзе" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="Луна" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+        </Grid>
+        <Grid x:Name="Floor4q" 
+              Visibility="Collapsed">
+            <Grid x:Name="q14" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Что такое звезда?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+                <Button Content="Сфера из плазмы" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="Каместая сфера"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="Газовая сфера с каменным ядром" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="Сфера из льда" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"
+                        />
+            </Grid>
+            <Grid x:Name="q24" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="В каком созвездии находится Полярная звезда?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Большая Медведица" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+                <Button Content="Лев"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+
+                <Button Content="Дракон" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+                <Button Content="Малая Медведица" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            <Grid x:Name="q34" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Какое созвездие похоже на утюг?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Лебедь" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="Лев"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="Орёл" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="Лира" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            <Grid x:Name="q44" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Каково созвездия не существует?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Скорпион" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="Рак"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="Козерог" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="Бабочка" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            <Grid x:Name="q54" 
+                  Visibility="Collapsed">
+
+                <TextBlock Text="Назовите ближайшую к нам звезду?"/>
+                <Button Content="Сириус" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="Солнце"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="Петельгейзе" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="Луна" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+        </Grid>
+        <Grid x:Name="Floor5q" 
+              Visibility="Collapsed">
+            <Grid x:Name="q15" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Что такое звезда?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+                <Button Content="Сфера из плазмы" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="Каместая сфера"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="Газовая сфера с каменным ядром" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="Сфера из льда" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ1NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"
+                        />
+            </Grid>
+            <Grid x:Name="q25" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="В каком созвездии находится Полярная звезда?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Большая Медведица" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+                <Button Content="Лев"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+
+                <Button Content="Дракон" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+                <Button Content="Малая Медведица" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ2NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            <Grid x:Name="q35" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Какое созвездие похоже на утюг?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Лебедь" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="Лев"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="Орёл" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="Лира" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ3NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            <Grid x:Name="q45" 
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Каково созвездия не существует?" 
+                           Grid.RowSpan="2" 
+                           Grid.ColumnSpan="4" 
+                           Margin="20" 
+                           TextWrapping="Wrap" 
+                           FontSize="30" 
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Скорпион" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="Рак"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="Козерог" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="Бабочка" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ4NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+            <Grid x:Name="q55" 
+                  Visibility="Collapsed">
+
+                <TextBlock Text="Назовите ближайшую к нам звезду?"/>
+                <Button Content="Сириус" 
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="Солнце"
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="Петельгейзе" 
+                        Grid.Column="2" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="Луна" 
+                        Grid.Column="3" 
+                        Grid.Row="3" 
+                        Margin="10"
+                        Click="nextQ5NotTrue"/>
+
+                <Button Content="К выбору этажа" 
+                        Grid.Column="3" 
+                        Grid.Row="4" 
+                        Margin="20" 
+                        Click="backQ1"/>
+            </Grid>
+        </Grid>
+       
     </Grid>
 </Window>
